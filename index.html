@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Inserción de librería de íconos de Iconify-->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    
+    <!-- Vinculación con hoja de estilos-->
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Proyecto Podcast | Leydi Velazco</title>
+</head>
+<body>
+     <!-- Cabecera (logo y menú de navegación) -->
+     <header class="main-header">
+        <nav class="menu">
+            <a  href="main-banner-section">
+                <img class="logo" src="./assets/img/logo.svg" alt="Logo BD">
+            </a>
+    
+            <input type="checkbox" id="menu-mobile">
+            <label for="menu-mobile" class="label-menu-mobile">
+                <span class="button-menu" id="top"></span>
+                <span class="button-menu" id="middle"></span>
+                <span class="button-menu" id="bottom"></span>
+            </label>   
+    
+            <ul class="menu-items">
+                <li>
+                    <a href="#episodes-section">EPISODIOS</a>
+                </li>
+                <li>     
+                    <a href="#about-section-container">NOSOTROS</a>
+                </li>
+                <li>
+                    <a href="#guests-section">ENTREVISTAS</a>
+                </li>
+                <li>
+                    <a href="#topics-section">TÓPICOS</a>
+                </li>
+            </ul>
+        </nav>
+    </header>   
+
+    <main>
+        <!-- Banner principal -->
+        <section id="main-banner-section"  class="main-banner section-container">
+            <div class="content-wrapper content">
+                <div class="container">
+                    <h1 class="title word-1"> Hello</h1>
+                    <h1 class="title word-2"> world</h1>
+                    <h1 class="title word-3"> pale blue dot</h1>
+                    <h1 class="title point"> .</h1>
+                    <p class="subtitle">El portal de podcasts que explota el mundo de la programación y la tecnología. Nuevos episodios
+                        todos los jueves cada 15 días.</p>
+                </div>
+                <div class="container-button">
+                    <a class="button blue position" href="">CONOCÉ MÁS</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de episodios -->
+        <section id="episodes-section" class="episodes-section section-container">
+            <div class="episodes-container">
+                <h2>Episodios</h2>
+                <div class="content-wrapper">
+                    <article class="episode-item episode-1">
+                        <iframe src="https://open.spotify.com/embed/episode/7AZZy2nJ4R9ZndHW0h2yxt?theme=0" width="100%" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </article>
+                    <article class="episode-item episode-2">
+                        <iframe src="https://open.spotify.com/embed/episode/1ezdL2ivAGLwSE6Xbssxqt" width="100%" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </article>
+                    <article class="episode-item episode-3">
+                        <iframe src="https://open.spotify.com/embed/episode/3cWta1iiQSfvrdHaCbLkSD?theme=0" width="100%" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </article>
+                    <article class="episode-item episode-4">
+                        <iframe src="https://open.spotify.com/embed/show/2Iibd5A6R7mxkCm4NwNmUn" width="100%" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+         <!-- De dónde venimos -->
+         <section id="about-section" class="about-section section-container">
+            <div class="about-container">
+                <img id="about-section-container" src="./assets/img/phone.png" alt="Informative phone about Joseph C. Towler ">
+                <div class="about-text">
+                    <h2>De dónde venimos</h2>
+                    <p class="about-paragraph-1">
+                        Our posturings, our imagined self-importance, the delusion that we have some privileged position in
+                        the Universe, are challenged by this point of pale light.
+                    </p>
+                    <p class="about-paragraph-2">
+                        Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this
+                        vastness, there is no hint that help will come from elsewhere to save us from ourselves.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Invitados estelares -->
+        <section id="guests-section" class="guests-section section-container">
+            <div>
+                <h2>Invitadas/os estelares</h2>
+
+                <div class="content-wrapper">
+                    <article class="guest-item">
+                        <img src="./assets/img/grace-hopper.png" alt="Photo about Grace Hopper">
+                    </article>
+                    <article class="guest-item">
+                        <img src="./assets/img/Katie-Bouman.png" alt="Photo about Katie Bouman">
+                    </article>
+                    <article class="guest-item">
+                        <img src="./assets/img/Margaret_Hamilton.png" alt="Photo about Margaret Hamilton">
+                    </article>
+                    <article class="guest-item">
+                        <img src="./assets/img/An E.R.A.Univac 1103 computer in the 1950s.png" alt="Photo about AGREGAR">
+                    </article>
+                    <article class="guest-item">
+                        <img src="./assets/img/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png" alt="Photo about AGREGAR">
+                    </article>
+                    <article class="guest-item">
+                        <img src="./assets/img/susan-kare.png" alt="Photo about Susan Kare">
+                    </article>
+                </div>
+            </div>
+        </section>
+
+         <!-- Temas -->
+         <section id="topics-section" class="topics-section section-container">
+            <h2>Algunos de nuestros temas</h2>
+            <div class="content-wrapper">
+                <a href="" class="topic-item">
+                    <article class="topic-1">
+                        <div>
+                            <img src="./assets/img/icon1.svg" alt="Home office">
+                        </div>
+                        <div>
+                            <h4>Trabajo remoto</h4>                            
+                        </div>
+                    </article>
+                </a>
+                <a href="" class="topic-item">
+                    <article class="topic-2">
+                        <div>
+                            <img src="./assets/img/icon2.svg" alt="Home office">
+                        </div>
+                        <div>
+                            <h4>Repensando la programación</h4>                            
+                        </div>
+                    </article>
+                </a>
+                <a href="" class="topic-item">
+                    <article class="topic-3">
+                        <div>
+                            <img src="./assets/img/icon3.svg" alt="Home office">
+                        </div>
+                        <div>
+                            <h4>Bases del código</h4>                            
+                        </div>
+                    </article>
+                </a>
+                <a href="" class="topic-item">
+                    <article class="topic-4">
+                        <div>
+                            <img src="./assets/img/icon4.svg" alt="Home office">
+                        </div>
+                        <div>
+                            <h4>Seguridad informática</h4>                            
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </section>
+
+        <!-- Novedades -->
+        <section class="news-section section-container">
+            <div class="content-wrapper">
+                <h2>¿Querés las últimas novedades?</h2>
+                <div class="container-button">
+                    <a class="button blue position" href="" >ESCUCHÁ LOS EPISODIOS</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Redes sociales -->
+        <div class="content-wrapper">
+            <p>©2019- Hello blue pale dot</p>            
+            <div class="social-networks">
+                <a href="https://www.spotify.com/us/" target="_blank">
+                    <span class="iconify" data-icon="akar-icons:spotify-fill" data-inline="false"></span>
+                </a>
+                <a href="https://www.instagram.com/?hl=en" target="_blank">
+                    <span class="iconify" data-icon="akar-icons:instagram-fill" data-inline="false"></span>                
+                </a>
+                <a href="https://twitter.com/?lang=en" target="_blank">
+                    <span class="iconify" data-icon="akar-icons:twitter-fill" data-inline="false"></span>                
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <span class="iconify" data-icon="akar-icons:facebook-fill" data-inline="false"></span>
+                </a>
+                <a href="https://telegram.org" target="_blank">
+                    <span class="iconify" data-icon="akar-icons:telegram-fill" data-inline="false"></span>                
+                </a> 
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

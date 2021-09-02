@@ -1,0 +1,860 @@
+/* Importación de fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap');
+
+/*----- ESTILOS BASE -----*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: none;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;   
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ----- BOXES  ----- */
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----- TIPOGRAFÍA  ----- */
+h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: 42px;
+}
+
+@media screen and (min-width: 1024px) {
+    h2 {
+        font-size: 48px;
+    }
+}
+
+h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #060A24;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+
+a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 28px;
+}
+
+/* ----- BOTONES ----- */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin: 16px;
+}
+
+.button.blue {
+    background-color: #00F3BB;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 16px;
+    color: #060A24;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+}
+
+.button.blue:hover{
+    color: #FFFFFF;
+    background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+}
+
+.button.blue.position {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .container-button {
+        width: 226px;
+        height: 56px;
+        margin: 56px 0 5px 200px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 16px 59px;
+        text-decoration: none;
+        margin: 0;
+    }
+
+    .button.blue {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .button.blue.position {
+        width: 100%;
+    }
+}
+
+/* ----- CABECERA ----- */
+
+.main-header {
+    width: 100%; 
+    position: fixed;
+    top: 0px;
+    z-index: 300;
+}
+
+.main-header .menu{
+    background-color: #FFFFFF;
+    height: 44px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.main-header .logo {
+    width: 24px;
+    margin-left: 16px; 
+}
+
+.label-menu-mobile {
+    cursor: pointer;
+}
+
+.label-menu-mobile #top, #middle, #bottom{
+    position: absolute;
+    content: '';
+    background: #060A24;
+    width: 18px;
+    height: 2px;
+    transition: all .4s ease-in-out;
+    right: 19px;
+}
+.label-menu-mobile #middle{
+    top: 17px;
+}
+
+.label-menu-mobile #bottom{
+    top: 27px;
+}
+
+#menu-mobile:checked ~ .label-menu-mobile #top{
+    transform: rotate(45deg);
+    top: 22px;
+}
+#menu-mobile:checked ~ .label-menu-mobile #middle{
+    opacity: 0;
+}
+#menu-mobile:checked ~ .label-menu-mobile #bottom{
+    transform: rotate(-45deg);
+    top: 22px;
+}
+
+.main-header .menu a {
+    line-height: 0px;
+} 
+
+.main-header .menu-items {
+    position: fixed;
+    width: 0%;
+    height: 224px;
+    top: 44px;
+    right: 0px;
+    background: #0000EC;
+    text-align: left;
+    transition: all .5s;
+}
+
+.menu-items li {
+    display: none;
+    margin:24px 16px;
+    padding: 5px 0px;
+    transition: all .5s;
+}
+
+.menu-items li:first-child {
+    margin-top: 16px;
+}
+
+
+.menu-items li a {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 28px;
+}
+
+.menu-items li a:hover {
+    color: #FFFFFF;
+    text-decoration: line-through;
+    transition: all .5s;
+} 
+
+.main-header #menu-mobile {
+    display: none;
+}
+
+.main-header #menu-mobile:checked ~ .menu-items{
+    width: 100%;
+}
+
+.main-header #menu-mobile:checked ~ .menu-items li{
+    display: block;
+}
+
+.menu-items li a:hover {
+    color: #FFFFFF;
+    text-decoration: line-through;
+    transition: all 0.4s;
+    } 
+
+.menu-items li a.active{
+    color: rgba(6,10,36,0.56);
+    transition: all 0.4s;
+}
+
+.section-container {
+    padding-top: 44px;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .main-header .menu{
+        height: 80px;
+        width: 100%;
+    } 
+    
+    .main-header .logo {
+        width: 36px;
+        margin-left: 100px; 
+    }
+
+    .main-header .button-menu {
+        display: none;
+    }
+    
+    .main-header .menu-items {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        top: 0;
+        background: #FFFFFF;
+        text-align: right;
+        transition: none;
+        margin-right: 100px;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .menu-items li {
+        display: inline-block;
+        margin:0px 24px;
+        padding: 0px;
+        transition: none;
+    }
+
+    .menu-items li a {
+        color: #060A24;
+    }
+
+    .menu-items li:first-child {
+        margin-top: 0px;
+    }
+
+    .menu-items li:last-child {
+        margin-right: 0px;
+    }
+
+    .menu-items li a:hover {
+        color: #00F3BB;
+    } 
+
+    .section-container {
+        padding-top: 80px;
+    }
+}
+
+/* ----- BANNER PRINCIPAL ----- */
+.main-banner {
+    display: flex;
+}
+
+.main-banner .container .title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 42px;
+}
+
+.main-banner .container .title.word-1,
+.main-banner .container .title.word-2,
+.main-banner .container .title.word-3,
+.main-banner .container .title.point{
+    display: inline-block;
+}
+
+.main-banner .container .title.word-1{
+    margin: 29px 0 0 16px;
+}
+
+.main-banner .container .title.word-2{
+    text-decoration: line-through;
+    margin-top: 29px;
+}
+
+.main-banner .container .title.word-3{
+    margin: 0 0 0 16px;
+}
+
+.main-banner .container .title.point{
+    color: #0000FF;
+}
+
+
+.main-banner .container .subtitle {
+    text-align: justify;
+
+    margin: 16px 16px 36px 16px; 
+}
+
+.main-banner .container-button {
+    margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+    .main-banner .container .title {
+        font-size: 64px;
+        line-height: 84px;
+    }
+    
+    .main-banner .container .title.word-1{
+        margin: 120px 0 0 200px;
+    }
+    
+    .main-banner .container .subtitle {
+        font-size: 16px;
+        line-height: 24px;    
+        margin: 16px 16px 56px 200px;
+        width: 628px;
+    }
+
+    .main-banner .container-button {
+        width: 226px;
+        height: 56px;
+        margin: 56px 0 5px 200px;
+    }
+}
+
+/* ----- EPISODIOS ----- */
+.episodes-section {
+    background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+}
+.episodes-section h2 {
+    margin-bottom: 32px;
+    color: #FFFFFF;
+    margin: 16px;
+    margin-top: 0px;
+    margin-bottom: 21px;
+    padding-top: 20px;
+}
+
+.episodes-container {
+    padding-top: 0px; 
+    padding-bottom: 143.5px; 
+}
+
+.episodes-section .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    row-gap: 11px;
+}
+
+.episode-item {
+    display: flex;
+    flex: 100%;
+    flex-direction: column;
+    justify-content: center; 
+    width: 100%;
+    padding:0 11px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023.98px) {
+    .episodes-section {
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .episodes-section {
+        clip-path: polygon(0 12%, 100% 0, 100% 88%, 0 100%);
+    }
+    .episodes-section h2 {
+        padding-left: 200px;
+        padding-right: 200px ;
+        padding-bottom: 26px;
+        font-size: 48px;
+        margin: 0px;
+        margin-top: 106px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    
+    .episodes-container {
+        padding-bottom: 232.6px; 
+    }
+    
+    .episodes-container .content-wrapper {
+        width: 100%;
+        max-width: 1240px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 72px;
+        column-gap: 70px;
+    }
+    
+    .episode-item {
+        flex: 50%;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 584px;
+        padding: 0;
+    }
+
+    .episode-item.episode-4 {
+        margin-bottom: 0px;
+    }
+
+    .episode-item iframe {
+        width: 100%;
+        max-width: 584px;
+    }
+}
+
+/* ----- DE DÓNDE VENIMOS ----- */
+.about-container {
+    margin-top: -128px;
+}
+
+.about-section img {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+.about-section h2 {
+    margin-bottom: 27px;
+    color: #060A24;
+    margin: 27px 16px 8px 16px;
+}
+
+.about-section p {
+    margin: 8px 16px 10px 16px;
+}
+
+.about-section .about-paragraph-1 {
+    margin: 8px 16px 16px 16px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023.98px) {
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-section img {
+        width: 60%;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about-section {
+        padding-top: -80px;
+    }
+    
+    .about-container {
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-text {
+        width: 464px;
+    }
+    
+    .about-section img {
+        width: 100%;
+        height: auto;
+        max-width: 457.6px;
+        margin-top: -265px;
+        position: relative;
+        z-index: 100;
+    }
+    
+    .about-section h2 {        
+        margin: 0px 16px 8px 16px;
+    }
+    
+    .about-section p {
+        margin: 0px 16px 54px 16px;
+    }
+    
+    .about-section .about-paragraph-1 {
+        margin: 24px 16px 16px 16px;
+    }
+}
+
+/* ----- INVITADOS ESTELARES ----- */
+.guests-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.guests-section h2 {
+    color: #060A24;
+    margin-bottom: 14px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.guest-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    width: 100%;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023.98px) {
+    .guests-section .content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: auto; 
+    }
+   
+    .guest-item {
+        flex: 50%;
+        justify-content: flex-start; 
+        align-items: center;
+    }
+
+    .guest-item img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .guests-section h2 {
+        margin-right:  759px;
+        margin-bottom: 36px;
+        margin-left: 200px;
+    }
+    
+    .guests-section .content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: auto; 
+    }
+   
+    .guest-item {
+        flex: 33.3%;
+    }
+
+    .guest-item img {
+        width: 100%;
+    }
+}
+
+/* ----- TEMAS ----- */
+.topics-section {
+    margin: auto;  
+}
+
+.topics-section h2 {
+    color: #060A24;
+    margin: 16px;
+    margin-top: 4px;
+    margin-bottom: 24px;
+}
+
+.topics-section h4 {
+    padding: 16px;
+}
+
+.topics-section .content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.topics-section .content-wrapper .topic-item article div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.topics-section .topic-1, 
+.topics-section .topic-2,
+.topics-section .topic-3, 
+.topics-section .topic-4 {
+    margin: 36px;
+}
+
+.topics-section .topic-1 {
+    margin-top: 24px;
+}
+
+.topics-section .topic-4 {
+    margin-bottom: 52px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023.98px) {
+    .topics-section {
+        margin: auto;    
+    }
+    
+    .topics-section h2 {
+        margin-top: 48px;
+        margin-bottom: 24px;
+        margin: 16px;
+    }
+    
+    .topics-section h4 {
+        width: 260px;
+    }
+    
+    .topics-section .content-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        margin: auto;
+        width: 70%;
+    }
+    
+    .topics-section .content-wrapper .topic-item {
+        width: 260px;
+        margin: 0 auto;
+    }
+
+    .topics-section .topic-1, 
+    .topics-section .topic-2,
+    .topics-section .topic-3, 
+    .topics-section .topic-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+        margin: 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .topics-section h2 {
+        margin-top: 0px;
+        margin-bottom: 69px;
+        margin-left: 200px;
+    }
+    
+    .topics-section h4 {
+        width: 260px;
+    }
+    
+    .topics-section .content-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        margin: auto;
+        width: 70%;
+    }
+    
+    .topics-section .content-wrapper .topic-item {
+        width: 260px;
+        margin: 0 auto;
+    }
+    
+    .topics-section .topic-1, 
+    .topics-section .topic-2,
+    .topics-section .topic-3, 
+    .topics-section .topic-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+        margin: 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    }
+}
+
+/* ----- NOVEDADES ----- */
+.news-section {
+    width: 100%;
+    background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+}
+
+.news-section .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     
+    padding-top: 16px;
+}
+
+.news-section h2 {
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0 16px;
+    margin-top: 20px;
+    margin-bottom: 36px;
+    padding: 2px;
+}
+
+.news-section a {
+    margin-bottom: 67px;
+}
+
+@media screen and (min-width: 1024px) {
+    .news-section {        
+        clip-path: polygon(0 32%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .news-section h2 {
+        margin-top: 133px;
+    }
+    
+    .news-section a {
+        margin-bottom: 0px;
+    }
+
+    .container-button {
+        width: 345px;
+        height: 56px;
+        margin: 0px auto 151px auto;
+    }
+    
+    .button {
+        display: inline-block;
+        padding: 16px 59px;
+        text-decoration: none;
+    }
+}
+
+/* ----- FOOTER ----- */
+.main-footer p {
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+    .main-footer p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .main-footer .content-wrapper {
+        height: auto; 
+        display: flex;  
+        justify-content: space-between;
+        margin-top:36px;
+        margin-bottom: 31px;
+    }
+    
+    .main-footer p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 28px;
+        margin-left: 100px;
+    }
+}
+
+/* ----- REDES SOCIALES ----- */
+.social-networks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    width: 227px;
+    margin: auto;
+}
+
+.social-networks .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-networks .iconify {
+    font-size: 16px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 28px;
+    transition: all ease-in-out 0.15s;
+}
+
+.social-networks .iconify:hover {
+    color: #00F3BB;
+}
+
+@media screen and (min-width: 1024px) {
+    .social-networks {
+        width: 196px;
+        margin: 0;
+        padding: 0;
+        margin-right: 100px;
+    }
+    
+    .social-networks .iconify {
+        font-size: 18px;
+    } 
+}
